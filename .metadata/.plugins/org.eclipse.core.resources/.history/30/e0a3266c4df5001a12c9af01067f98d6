@@ -1,0 +1,44 @@
+package tsp_hillclimbing.entities;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Driver {
+	
+	private ArrayList<Ciudad> ciudadesIniciales=new ArrayList<Ciudad>();
+
+	public static void main(String[] args) {
+		Driver driver=new Driver();
+		Ruta ruta=new Ruta(driver.ciudadesIniciales);
+		imprimirHead(ruta);
+		System.out.print(ruta+" |    "+ruta.getDistancialTotalString());
+		new HillClimbing().encontrarRutaMasCorta(ruta);
+	}
+	
+	public static void imprimirHead(Ruta ruta) {
+		String headColumn1="Ruta";
+		String columnasRestantes="Distancia(in millas) | Comparar adjacente con ruta concurrente";
+		int ciudadNombresLargo=0;
+		for(int x=0;x<ruta.getCiudades().size();x++) {
+			ciudadNombresLargo+=ruta.getCiudades().get(x).getNombre().length();
+		}
+		int arregloLargo=ciudadNombresLargo+ruta.getCiudades().size()*2;
+		int mitadLargo=(arregloLargo-headColumn1.length())/2;
+		for(int x=0;x<mitadLargo;x++) {
+			System.out.print(" ");
+		}
+		System.out.print(headColumn1);
+		for(int x=0;x<mitadLargo;x++) {
+			System.out.print(" ");
+		}
+		if((arregloLargo%2)==0) {
+			System.out.print(" ");
+		}
+		System.out.println(" | "+columnasRestantes);
+		ciudadNombresLargo+=columnasRestantes.length()+3;
+		for(int x=0;x<ciudadNombresLargo+ruta.getCiudades().size()*2;x++) {
+			System.out.print("-");
+		}
+		System.out.println("");
+	}
+}

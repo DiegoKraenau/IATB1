@@ -1,0 +1,62 @@
+package tsp_hillclimbing.entities;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Driver {
+	
+	private ArrayList<Ciudad> ciudadesIniciales=new ArrayList<Ciudad>(
+
+	
+	 Arrays.asList(
+			new Ciudad("Boston", 42.3601, -71.0589),
+			new Ciudad("Houston", 29.7604, -95.3698),
+			new Ciudad("Austin",30.2672,-97.7431),
+			new Ciudad("San Francisco",37.7749,-122.4194),
+			new Ciudad("Denver", 39.7392, -104.9903),
+			new Ciudad("Los Angeles", 34.0552, -118.2437),
+			new Ciudad("Chicago", 41.8781, -87.6298),
+			new Ciudad("New York", 32.7767, -96.7970),
+			new Ciudad("Seatle", 47.6062, -122.3321)
+			) 
+	 
+			);
+	
+	public static void main(String[] args) {
+		Driver driver=new Driver();
+		Ruta ruta=new Ruta(driver.ciudadesIniciales);
+		imprimirHead(ruta);
+		System.out.print(ruta+" |asdasdasdasd    "+ruta.getDistancialTotalString());
+		new HillClimbing().encontrarRutaMasCorta(ruta);
+	}
+	
+	public static void imprimirHead(Ruta ruta) {
+		String headColumn1="Ruta";
+		String columnasRestantes="Distancia | Comparar adjacente con ruta concurrente";
+		int ciudadNombresLargo=0;
+		for(int x=0;x<ruta.getCiudades().size();x++) {
+			ciudadNombresLargo+=ruta.getCiudades().get(x).getNombre().length();
+		}
+		int arregloLargo=ciudadNombresLargo+ruta.getCiudades().size()*2;
+		int mitadLargo=(arregloLargo-headColumn1.length())/2;
+		for(int x=0;x<mitadLargo;x++) {
+			System.out.print(" ");
+		}
+		System.out.print(headColumn1);
+		for(int x=0;x<mitadLargo;x++) {
+			System.out.print(" ");
+		}
+		if((arregloLargo%2)==0) {
+			System.out.print(" ");
+		}
+		System.out.println(" | "+columnasRestantes);
+		ciudadNombresLargo+=columnasRestantes.length()+3;
+		for(int x=0;x<ciudadNombresLargo+ruta.getCiudades().size()*2;x++) {
+			System.out.print("-");
+		}
+		System.out.println("");
+	}
+	
+	
+}
+
