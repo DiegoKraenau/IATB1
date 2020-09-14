@@ -2,6 +2,7 @@ package tsp_hillclimbing.entities;
 
 public class Ciudad {
 	private static final double TIERRA_ECUATORIAL_RADIO=6378.1370D;
+	
 	private static final double CONVERTIR_GRADOS_RADIANES=Math.PI/180D;
 	private static final double CONVERTIR_KM_MILES=0.621371;
 	

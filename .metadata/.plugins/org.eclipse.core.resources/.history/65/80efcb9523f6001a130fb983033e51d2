@@ -9,15 +9,15 @@ public class Driver {
 
 	
 	 Arrays.asList(
-			new Ciudad("Lima", -12.0621065, -77.0365256),
-			new Ciudad("Arequipa", -16.398867, -71.536961),
-			new Ciudad("Cusco",-13.5170887,-71.9785356),
-			new Ciudad("Trujillo",-8.1116778,-79.0287742),
-			new Ciudad("Tumbes", -3.833333, -80.5),
-			new Ciudad("Ica", -14.3325, -75.499722),
-			new Ciudad("Junin", -11.5, -75),
-			new Ciudad("Loreto", -5, -75),
-			new Ciudad("Puno", -15, -70)
+			new Ciudad("Lima", 42.3601, -71.0589),
+			new Ciudad("Arequipa", 29.7604, -95.3698),
+			new Ciudad("Cusco",30.2672,-97.7431),
+			new Ciudad("Trujillo",37.7749,-122.4194),
+			new Ciudad("Tumbes", 39.7392, -104.9903),
+			new Ciudad("Ica", 34.0552, -118.2437),
+			new Ciudad("Junin", 41.8781, -87.6298),
+			new Ciudad("Loreto", 32.7767, -96.7970),
+			new Ciudad("Puno", 47.6062, -122.3321)
 			) 
 	 
 			);

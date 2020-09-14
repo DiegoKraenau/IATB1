@@ -23,7 +23,7 @@ public class HillClimbing {
 		}
 		
 		if(contadorIterador==100) {
-			System.out.println("     | RUTA FINAL");
+			System.out.println("     | potential maxima");
 		}else {
 			System.out.println("     | "+compararRutas);
 		}

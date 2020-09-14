@@ -5,22 +5,7 @@ import java.util.Arrays;
 
 public class Driver {
 	
-	private ArrayList<Ciudad> ciudadesIniciales=new ArrayList<Ciudad>(
-
-	
-	 Arrays.asList(
-			new Ciudad("Lima", -12.0621065, -77.0365256),
-			new Ciudad("Arequipa", -16.398867, -71.536961),
-			new Ciudad("Cusco",-13.5170887,-71.9785356),
-			new Ciudad("Trujillo",-8.1116778,-79.0287742),
-			new Ciudad("Tumbes", -3.833333, -80.5),
-			new Ciudad("Ica", -14.3325, -75.499722),
-			new Ciudad("Junin", -11.5, -75),
-			new Ciudad("Loreto", -5, -75),
-			new Ciudad("Puno", -15, -70)
-			) 
-	 
-			);
+	private ArrayList<Ciudad> ciudadesIniciales=new ArrayList<Ciudad>();
 	
 	public static void main(String[] args) {
 		Driver driver=new Driver();
